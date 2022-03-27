@@ -16,9 +16,10 @@
 #endif
 
 
-
+//Spawning thread to run UDP Server parallel to simulator
 std::thread t(runUDPserver);
 
+//Function that reads data from simulator and packs it into a message for UDP Server
 float UpdateMessage(float          inElapsedSinceLastCall,
 	float                inElapsedTimeSinceLastFlightLoop,
 	int                  inCounter,
@@ -29,7 +30,7 @@ float UpdateMessage(float          inElapsedSinceLastCall,
 	char buf2[BUFLEN];
 
 	if (lines1[0] == NULL) {
-		fprintf(g, "Cannot load dataref\n");
+
 	}
 	else {
 		memset(buf1, 0, BUFLEN);
@@ -99,7 +100,6 @@ PLUGIN_API int XPluginStart(
 	strcpy(outDesc, "Wysyla dane z wyswietlacza przez UDP");
 
 
-	fprintf(g, "Start Pluginu");
 
 	XPLMCreateFlightLoop_t messageParams;
 	messageParams.structSize = sizeof(messageParams);
@@ -131,7 +131,6 @@ PLUGIN_API void	XPluginStop(void)
 	isFinished = true;
 	msg_mutex.unlock();
 	t.join();
-	fclose(g);
 }
 
 PLUGIN_API void XPluginDisable(void) { }

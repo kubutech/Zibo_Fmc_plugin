@@ -41,7 +41,6 @@ void runUDPserver() {
 
 		}
 		else {
-			fprintf(g, "Received Packet- %dbytes (%c)\tfrom: %s\n", recv_len, rcvBuf[0], inet_ntoa(si_other.sin_addr));
 			msg_mutex.lock();
 			if (rcvBuf[0] == '1') {
 				memcpy(sendBuf, msg1, BUFLEN);
@@ -55,10 +54,6 @@ void runUDPserver() {
 
 			int len = strlen(sendBuf);
 
-			for (int i = 0; i < strlen(sendBuf); i++) {
-				fprintf(g, "%d ", sendBuf[i]);
-			}
-			fprintf(g, "\n");
 			sendto(s, sendBuf, len, 0, (struct sockaddr*)&si_other, slen);
 
 			//fprintf(g, "Sent Packet- %dbytes:\n%s\n", len, sendBuf);

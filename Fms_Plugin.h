@@ -46,7 +46,6 @@ BOOL isFinished = false;
 char msg1[BUFLEN];
 char msg2[BUFLEN];
 
-FILE* g = fopen("g:\\serverLog.txt", "w");
 
 #include "FindDataRefs.h"
 #include "UDPserver.h"
