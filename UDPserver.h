@@ -65,6 +65,7 @@ void runUDPserver() {
 		}
 		msg_mutex.lock();
 		if (isFinished) {
+			msg_mutex.unlock();
 			return;
 		}
 		msg_mutex.unlock();

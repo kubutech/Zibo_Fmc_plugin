@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Program Files (x86)\Steam\steamapps\common\X-Plane 11\Aircraft\B737-800X\plugins\Zibo_FMS_plugin\win_x64\Zibo_FMS_plugin.xpl</FullPath>
+      <FullPath>C:\Users\kubab\Documents\Visual Studio 2019\Zibo FMS plugin\x64\Release\Zibo_FMS_plugin.xpl</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

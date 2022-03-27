@@ -85,7 +85,7 @@
     <TargetExt>.xpl</TargetExt>
     <IncludePath>C:\Users\kubab\Documents\Visual Studio 2019\Zibo FMS plugin\XPlane SDK;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\kubab\Documents\Visual Studio 2019\Zibo FMS plugin\XPlane SDK\Libraries;$(LibraryPath)</LibraryPath>
-    <OutDir>..\..\..\..\..\Program Files %28x86%29\Steam\steamapps\common\X-Plane 11\Aircraft\B737-800X\plugins\$(ProjectName)\win_x64</OutDir>
+    <OutDir>.\x64\Release</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -161,7 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FindDataRefs.h" />
-    <ClInclude Include="Framework.h" />
+    <ClInclude Include="Fms_Plugin.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
