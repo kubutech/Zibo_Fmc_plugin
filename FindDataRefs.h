@@ -6,8 +6,8 @@ float FindDataRefs(float          inElapsedSinceLastCall,
 	int                  inCounter,
 	void* time)
 {
+	
 	//CPT FMC
-
 	lines1[0] = XPLMFindDataRef("laminar/B738/fmc1/Line00_L");
 	lines1[1] = XPLMFindDataRef("laminar/B738/fmc1/Line01_L");
 	lines1[2] = XPLMFindDataRef("laminar/B738/fmc1/Line02_L");
@@ -94,11 +94,9 @@ float FindDataRefs(float          inElapsedSinceLastCall,
 	tdDistance = XPLMFindDataRef("laminar/B738/fms/vnav_td_dist");
 
 	if (lines1[0] == NULL) {
-		fprintf(g, "Failed to find dataref\n");
 		return 0.05;
 	}
 	else {
-		fprintf(g, "Dataref loaded successfully\n");
 		return 0;
 	}
 
