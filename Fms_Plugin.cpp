@@ -15,9 +15,8 @@
 #error This is made to be compiled against the XPLM301 SDK
 #endif
 
+std::thread t;
 
-//Spawning thread to run UDP Server parallel to simulator
-std::thread t(runUDPserver);
 
 //Function that reads data from simulator and packs it into a message for UDP Server
 float UpdateMessage(float          inElapsedSinceLastCall,
@@ -100,6 +99,8 @@ PLUGIN_API int XPluginStart(
 	strcpy(outDesc, "Wysyla dane z wyswietlacza przez UDP");
 
 
+	//Spawning thread to run UDP Server parallel to simulator
+	t = std::thread(runUDPserver);
 
 	XPLMCreateFlightLoop_t messageParams;
 	messageParams.structSize = sizeof(messageParams);
