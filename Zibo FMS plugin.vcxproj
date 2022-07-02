@@ -83,8 +83,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <TargetExt>.xpl</TargetExt>
-    <IncludePath>C:\Users\kubab\Documents\Visual Studio 2019\Zibo FMS plugin\XPlane SDK;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\kubab\Documents\Visual Studio 2019\Zibo FMS plugin\XPlane SDK\Libraries;$(LibraryPath)</LibraryPath>
+    <IncludePath>.\XPlane SDK;$(IncludePath)</IncludePath>
+    <LibraryPath>.\XPlane SDK\Libraries;$(LibraryPath)</LibraryPath>
     <OutDir>.\x64\Release</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
