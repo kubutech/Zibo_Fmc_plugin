@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Fms_Plugin.cpp">
+    <ClCompile Include="Fmc_Plugin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Fms_Plugin.h">
+    <ClInclude Include="Fmc_Plugin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FindDataRefs.h">
+    <ClInclude Include="Fmc_plugin_functions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,8 +1,6 @@
 #pragma once
-
 #pragma comment(lib, "Ws2_32.lib")
-//#include <winsock2.h>
-//#include <Windows.h>
+#include <winsock.h>
 #include <string.h>
 #include <stdio.h>
 #include <time.h>
@@ -13,13 +11,6 @@
 #include "XPLMPlugin.h"
 #include "XPLMDataAccess.h"
 #include "XPLMProcessing.h"
-
-
-
-
-
-void runUDPserver();
-
 
 #define PORT 10000
 #define BUFLEN 1024
@@ -46,6 +37,4 @@ BOOL isFinished = false;
 char msg1[BUFLEN];
 char msg2[BUFLEN];
 
-
-#include "FindDataRefs.h"
-#include "UDPserver.h"
+#include "Fmc_plugin_functions.h"

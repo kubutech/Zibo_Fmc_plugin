@@ -24,7 +24,7 @@
     <ProjectGuid>{773fc4b8-e4d9-45e6-a063-868e5cfcab4c}</ProjectGuid>
     <RootNamespace>ZiboFMSplugin</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Zibo_FMS_plugin</ProjectName>
+    <ProjectName>Zibo_Fmc_plugin</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -85,7 +85,7 @@
     <TargetExt>.xpl</TargetExt>
     <IncludePath>.\XPlane SDK;$(IncludePath)</IncludePath>
     <LibraryPath>.\XPlane SDK\Libraries;$(LibraryPath)</LibraryPath>
-    <OutDir>.\x64\Release</OutDir>
+    <OutDir>.\x64\Release\Zibo_Fmc_plugin\win_x64\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -157,11 +157,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Fms_Plugin.cpp" />
+    <ClCompile Include="Fmc_Plugin.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FindDataRefs.h" />
-    <ClInclude Include="Fms_Plugin.h" />
+    <ClInclude Include="Fmc_Plugin.h" />
+    <ClInclude Include="Fmc_plugin_functions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
