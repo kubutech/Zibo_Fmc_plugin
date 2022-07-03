@@ -22,19 +22,21 @@ PLUGIN_API int XPluginStart(
 	char* outSig,
 	char* outDesc)
 {
-	strcpy(outName, "ziboFMS");
-	strcpy(outSig, "kuba.projects.ziboFMS");
+	strcpy(outName, "Fmc_Plugin");
+	strcpy(outSig, "kuba.projects.Fmc_plugin");
 	strcpy(outDesc, "Wysyla dane z wyswietlacza przez UDP");
 
 	//Spawning thread to run UDP Server parallel to simulator
 	t = std::thread(runUDPserver);
 
+	//loop for updating message
 	XPLMCreateFlightLoop_t messageParams;
 	messageParams.structSize = sizeof(messageParams);
 	messageParams.callbackFunc = UpdateMessage;
 	messageParams.phase = 1;
 	messageParams.refcon = NULL;
 
+	//loop for finding Dataref variables
 	XPLMCreateFlightLoop_t datarefParams;
 	datarefParams.structSize = sizeof(datarefParams);
 	datarefParams.callbackFunc = FindDataRefs;

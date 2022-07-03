@@ -221,7 +221,7 @@ float FindDataRefs(float          inElapsedSinceLastCall,
 
 	tdDistance = XPLMFindDataRef("laminar/B738/fms/vnav_td_dist");
 
-	//if datarefs failed to initialize run fightloop again, otherwise don't
+	//if datarefs failed to initialize run fightloop again, otherwise stop loop execution
 	if (lines1[0] == NULL) {
 		return 0.05;
 	}
