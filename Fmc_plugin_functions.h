@@ -34,13 +34,7 @@ void runUDPserver() {
 		slen = sizeof(si_other);
 
 		if (recv_len = recvfrom(s, rcvBuf, BUFLEN, 0, (struct sockaddr*)&si_other, &slen) == SOCKET_ERROR) {
-			msg_mutex.lock();
-			//check if X-Plane called XPlugnStop fuction and server should shut down
-			if (isFinished) {
-				msg_mutex.unlock();
-				return;
-			}
-			msg_mutex.unlock();
+			
 		}
 		else {
 			msg_mutex.lock();
@@ -56,6 +50,13 @@ void runUDPserver() {
 
 			sendto(s, sendBuf, len, 0, (struct sockaddr*)&si_other, slen);
 		}
+		msg_mutex.lock();
+		//check if X-Plane called XPlugnStop fuction and server should shut down
+		if (isFinished) {
+			msg_mutex.unlock();
+			return;
+		}
+		msg_mutex.unlock();
 	}
 }
 
